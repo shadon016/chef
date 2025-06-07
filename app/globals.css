@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+  .wrapper {
+    @apply px-6 lg:max-w-[calc(1440px-120px)] mx-auto;
+  }
+}
