@@ -3,6 +3,7 @@ import {
   banglaToEnglishNumber,
   EnglishNumberToBangla,
 } from "@/utils/numberConversion.js";
+import { Plus, Minus, Trash2 } from "lucide-react";
 
 const foodMenu = [
   {
@@ -87,7 +88,9 @@ const CustomPackege = () => {
   const decrement = (item) => {
     setQuantity((item.quantity = item?.quantity - 1));
   };
-
+  const remove = (item) => {
+    setQuantity((item.quantity = item?.quantity * 0));
+  };
   const addToPackage = (item) => {
     setSelectedItems((prevItems) => {
       const existingItem = prevItems.find((i) => i.name === item.name);
@@ -108,7 +111,7 @@ const CustomPackege = () => {
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className="flex-1 flex flex-wrap gap-6">
+      <div className="flex-1 flex flex-wrap gap-6 justify-center">
         {foodMenu?.map((item, index) => (
           <div key={index} className="p-4 shadow-2xl shadow-gray-800 w-32">
             <p>{item?.name}</p>
@@ -118,41 +121,57 @@ const CustomPackege = () => {
         ))}
       </div>
       <div className="flex-1">
-        <p>pacakger goes here</p>
+        {selectedItems?.length <= 0 && <p>no items here</p>}
         {selectedItems?.map((item, index) => (
           <div key={index} className="flex justify-between">
             {item?.quantity > 0 && (
-              <div className="flex gap-4">
+              <div className="flex gap-4 justify-center my-4">
                 <p>{item?.name}</p>
                 <p>{EnglishNumberToBangla(String(item?.quantity))}</p>
                 <p>{item?.price}</p>
-                <div>
-                  <hr />
-                  <p>{EnglishNumberToBangla(String(totalPrice))}</p>
-                </div>
               </div>
             )}
             {item?.quantity > 0 && (
-              <div>
+              <div className="flex gap-2 lg:gap-6 my-4">
                 <button
                   onClick={() => {
                     increment(item);
                   }}
+                  className="lg:px-4  bg-green-500"
                 >
-                  +
+                  <Plus />
                 </button>
                 <button
                   onClick={() => {
                     decrement(item);
                   }}
+                  className="lg:px-4 bg-gray-500"
                 >
-                  -
+                  <Minus size={20} />
                 </button>
-                <button>d</button>
+                <button
+                  className="lg:px-4 py-1/3 bg-red-600"
+                  onClick={() => remove(item)}
+                >
+                  <Trash2 size={20} />
+                </button>
               </div>
             )}
           </div>
         ))}
+        <div className="py-4">
+          <hr />
+          <div className="flex justify-between items-center">
+            <p className="py-2">
+              সর্বমোট {EnglishNumberToBangla(String(totalPrice))} টাকা
+            </p>
+            <div className="p-4">
+              <button className=" bg-red-400 py-2 w-full rounded-md px-6">
+                অর্ডার করুন
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

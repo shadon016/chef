@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Logo = () => {
   return (
-    <div className="flex justify-center items-center gap-2 shadow shadow-sm-gray-800 px-4 py-2 rounded-sm">
+    <div className="flex justify-center items-center gap-2 shadow-sm shadow-gray-600 px-4 py-2 rounded-sm ">
       <Image
         src="/cooking.png"
         height="100"
