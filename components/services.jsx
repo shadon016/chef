@@ -6,9 +6,7 @@ import ItemCard from "./itemCard";
 const Services = () => {
   return (
     <div className="py-8 wrapper">
-      <h2 className="text-center font-extrabold text-4xl">
-        আমাদের সার্ভিসসমূহ
-      </h2>
+      <h2 className="heading py-12">আমাদের সার্ভিসসমূহ</h2>
       <div className="flex gap-4 lg:gap-12 flex-wrap justify-center wrapper">
         <ItemCard
           img={"/fish.jpeg"}

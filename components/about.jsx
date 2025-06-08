@@ -11,12 +11,12 @@ const About = () => {
             height={1000}
             width={1000}
             alt="banner"
-            className="h-full w-full"
+            className="h-full w-full rounded-t-2xl"
           />
         </div>
       </div>
       <div className="flex-1 flex flex-col gap-4">
-        <h2>আমাদের সম্পর্কে</h2>
+        <h2 className="heading text-start">আমাদের সম্পর্কে</h2>
         <p>
           আমাদের খাবার মানেই ঘরোয়ার মমতা ও ভালোবাসা। শহরের ব্যস্ত জীবনে ঘরোয়া
           স্বাদের খাবার খাওয়ার মতো সময় পাওয়া মুশকিল হয়ে গেছে — আর সেই অভাব পূরণ
