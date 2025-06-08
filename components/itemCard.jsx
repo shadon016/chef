@@ -10,7 +10,7 @@ const ItemCard = ({ img, price, item }) => {
         height={800}
         width={800}
         alt="pic"
-        className="w-80 h-64 rounded-t-xl"
+        className="w-80 h-64 rounded-t-xl hover:scale-110 duration-[1s]"
       />
       <div className="p-4">
         <h3 className="py-2 flex justify-between items-center text-xl font-bold">
