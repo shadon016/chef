@@ -15,7 +15,7 @@ const About = () => {
           />
         </div>
       </div>
-      <div className="flex-1 flex flex-col gap-4">
+      <div className="flex-1 flex flex-col gap-4 text-justify">
         <h2 className="heading text-start">আমাদের সম্পর্কে</h2>
         <p>
           আমাদের খাবার মানেই ঘরোয়ার মমতা ও ভালোবাসা। শহরের ব্যস্ত জীবনে ঘরোয়া

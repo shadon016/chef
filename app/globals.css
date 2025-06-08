@@ -27,7 +27,7 @@ body {
 
 @layer components {
   .wrapper {
-    @apply px-6 lg:max-w-[calc(1440px-120px)] mx-auto;
+    @apply px-6 lg:w-[calc(1440px-120px)] lg:px-0 mx-auto;
   }
   .heading {
     @apply text-center font-extrabold text-4xl;

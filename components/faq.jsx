@@ -5,7 +5,7 @@ import React from "react";
 const Faq = () => {
   return (
     <div>
-      <div className="w-[80%] mx-auto wrapper">
+      <div className="w-full lg:w-[80%] mx-auto wrapper">
         <h2 className="heading py-12">সাধারণ জিজ্ঞাসা</h2>
         <div className="space-y-4">
           {[
