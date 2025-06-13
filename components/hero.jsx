@@ -2,7 +2,10 @@ import React from "react";
 import { CircleCheck } from "lucide-react";
 const Hero = () => {
   return (
-    <div className="bg-[url('/hero.jpg')] h-[calc(100vh-80px)] bg-cover flex justify-center items-center">
+    <div
+      className="bg-[url('/hero.jpg')] h-[calc(100vh-80px)] bg-cover flex justify-center items-center"
+      id="home"
+    >
       <div className="backdrop-blur bg-black/30 flex flex-col items-center justify-center rounded-2xl text-center py-6  lg:p-12">
         <h1 className="text-2xl md:text-4xl lg:text-6xl font-extrabold md:leading-20 md:px-12">
           বাড়ির বাইরেও উপভোগ করুন

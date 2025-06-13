@@ -1,10 +1,10 @@
 import React from "react";
-import PackegeWrapper from "@/components/packegeWrapper";
+import AllPackege from "@/components/allPackege.jsx";
 
 const Page = () => {
   return (
     <div className="wrapper">
-      <PackegeWrapper />
+      <AllPackege />
     </div>
   );
 };

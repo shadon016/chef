@@ -12,9 +12,7 @@ const PackegeWrapper = () => {
         <button
           className="px-12 py-2 bg-red-400"
           onClick={() => setCustomPack((prev) => !prev)}
-        >
-          {customPack ? "আমাদের সেট মেনুতে ফিরে যান" : "একটি প্যাকেজ তৈরি করুন"}
-        </button>
+        ></button>
       </div>
       <div className="">
         {customPack && <CustomPackege />}

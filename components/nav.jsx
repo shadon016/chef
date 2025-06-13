@@ -12,19 +12,18 @@ const Nav = () => {
         </div>
         <ul className="hidden lg:flex gap-6 ">
           <div>
-            <Link href="/">হোম</Link>
+            <Link href="/#home">হোম</Link>
           </div>
-          <div>
-            <Link href="/">সার্ভিস</Link>
-          </div>
+
           <div>
             <Link href="/packages">সকল প্যাকেজ</Link>
           </div>
           <div>
-            <Link href="/">আমাদের সম্পর্কে</Link>
+            <Link href="/customPack">একটি প্যাকেজ তৈরি করুন</Link>
           </div>
+
           <div>
-            <Link href="/">সাধারণ জিজ্ঞাসা</Link>
+            <Link href="/signin">লগইন</Link>
           </div>
         </ul>
         <div className="lg:hidden">

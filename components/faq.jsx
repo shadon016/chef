@@ -4,7 +4,7 @@ import React from "react";
 
 const Faq = () => {
   return (
-    <div>
+    <div id="faq">
       <div className="w-full lg:w-[80%] mx-auto wrapper">
         <h2 className="heading py-12">সাধারণ জিজ্ঞাসা</h2>
         <div className="space-y-4">
@@ -40,7 +40,7 @@ const Faq = () => {
           ].map((faq, index) => (
             <div key={index} className="border rounded-lg">
               <button
-                className="w-full flex justify-between items-center p-4 text-left text-lg font-medium text-gray-700 hover:text-gray-900 focus:outline-none"
+                className="w-full flex justify-between items-center p-4 text-left text-lg font-medium text-white  focus:outline-none"
                 onClick={(e) => {
                   const content = e.currentTarget.nextElementSibling;
                   content.style.maxHeight
@@ -49,13 +49,13 @@ const Faq = () => {
                 }}
               >
                 {faq.question}
-                <span className="ml-2 text-gray-500">+</span>
+                <span className="ml-2 text-white">+</span>
               </button>
               <div
                 className="overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
                 style={{ maxHeight: 0 }}
               >
-                <p className="p-4 text-gray-600">{faq.answer}</p>
+                <p className="p-4 text-white">{faq.answer}</p>
               </div>
             </div>
           ))}

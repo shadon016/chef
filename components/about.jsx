@@ -3,7 +3,10 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-6 wrapper">
+    <div
+      className="flex flex-col lg:flex-row gap-6 wrapper lg:py-20"
+      id="about"
+    >
       <div className="flex-1">
         <div className="flex">
           <Image
